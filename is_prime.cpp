@@ -24,6 +24,13 @@ int main() {
     int n;
     cout << "Enter a number";
     cin >> n;
-    cout << isPrime(n);
+    while (true) {
+        if(isPrime(n)) {
+            cout << n;
+            break;
+        } else {
+            ++n;
+        }
+    }
     return 0;
 }
