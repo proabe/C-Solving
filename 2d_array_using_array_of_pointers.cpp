@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void print2dArray(int **arr, int m, int n) {
+void print2dArray(int *arr[], int m, int n) {
     for (int i = 0; i < m; i++)
     {
         for (int j = 0; j < n; j++)
@@ -18,8 +18,7 @@ int main() {
     cin >> m;
     cout << "Enter no. of columns of the array\n";
     cin >> n;
-    int **arr; // allocated on heap
-    arr = new int *[m];
+    int *arr[m]; // allocated on stack
     for (int i = 0; i < m; i++)
     {
         arr[i] = new int [n];
