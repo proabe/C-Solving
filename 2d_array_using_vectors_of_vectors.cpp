@@ -6,7 +6,7 @@ using namespace std;
 // numbers of rows and columns can be dynamic
 // easier to pass as an argument to function
 
-void print2dArray(vector< vector<int> > arr) {
+void print2dArray(vector< vector<int> > &arr) {
     for (int i = 0; i < arr.size(); i++)
     {
         for (int j = 0; j < arr[i].size(); j++)
