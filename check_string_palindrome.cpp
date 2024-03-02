@@ -8,27 +8,14 @@ bool isPalindrome(string str) {
     return false;
   }
   unsigned int start = 1, end = stringLength - 2;
-  if (stringLength % 2 == 0) {
-    while (start <= end)
+  while (start <= end)
+  {
+    if (str[start] != str[end])
     {
-      if (str[start] != str[end])
-      {
-        return false;
-      }
-      start++;
-      end--;
+      return false;
     }
-    
-  } else {
-    while (start != end)
-    {
-     if (str[start] != str[end])
-      {
-        return false;
-      }
-      start++;
-      end--;
-    }
+    start++;
+    end--;
   }
   return true;
 }
